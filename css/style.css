@@ -1,3 +1,297 @@
-.hidden{
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+html {
+    overflow: hidden;
+    outline: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    position: relative;
+    overflow-x: hidden;
+    height: 100vh;
+    outline: none !important;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body>img {
+    position: absolute;
+    min-width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+
+.hidden {
     display: none;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container * {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    outline: none;
+}
+
+#clock {
+    color: #fff;
+    font-size: 130px;
+    margin-bottom: 30px;
+}
+
+#login-form input[type="text"] {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    height: 40px;
+    width: 400px;
+    font-size: 30px;
+    color: #fff;
+}
+
+#login-form input[type="text"]:focus {
+    border-bottom: 2px solid coral;
+}
+
+#login-form input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 30px;
+}
+
+.login_btn {
+    height: 40px;
+    background: coral;
+    color: #fff;
+    border: none;
+    padding: 0 20px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.todo-form {
+    position: absolute;
+    left: 5%;
+    top:5%;
+    background-color: rgba(0,0,0,0.5);
+    padding: 40px 20px;
+    min-width: 300px;
+    min-height: 400px;
+    border-radius: 5px;
+}
+
+#todo-form input{
+    background:none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    height: 30px;
+    outline: none !important;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Cafe24Oneprettynight';
+}
+#todo-form input::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    font-family: 'Cafe24Oneprettynight';
+}
+#todo-form input:focus{
+    border-bottom: 1px solid coral;
+}
+#greeting{
+    color: #fff;
+    font-family: 'Cafe24Oneprettynight';
+    font-size: 50px;
+}
+#weather{
+    position: absolute;
+    right: 40px;
+    top: 20px;
+}
+#weather span{
+    color: #fff;
+    font-size: 20px;
+}
+#quote{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    bottom: 30px;
+}
+#quote span{
+    color: #fff;
+    font-family: 'Cafe24Oneprettynight';
+    font-size: 18px;
+}
+#todo-list {
+    padding-top: 30px;
+}
+#todo-list li{
+    color: #fff;
+    font-family: 'Cafe24Oneprettynight';
+    font-size: 18px;
+    margin: 5px 0;
+    position: relative;
+    padding-right: 20px;
+    margin-bottom: 15px;
+    
+}
+#todo-list li button{
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    vertical-align: top;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+#todo-list li button:hover{
+    opacity: 0.6;
 }
